@@ -12,7 +12,7 @@ import paramiko
 import time
 import subprocess
 
-auth = '8b56d9ab3ce0'  # 1,点灯app上获得的密匙
+auth = 'xxxx'  # 1,点灯app上获得的密匙
 
 BLINKER_DEBUG.debugAll()
 
@@ -20,11 +20,11 @@ Blinker.mode("BLINKER_WIFI")
 Blinker.miotType('BLINKER_MIOT_OUTLET')
 Blinker.begin(auth)
 
-staticip = "192.168.0.102"  # 2,电脑局域网固定IP，用于检测电脑开关状态以及利用SSH关机，改为你的设置
-pcusr = 'test'  # 3,电脑ssh用户名
-pcpw = '123'  # 4,电脑ssh密码
+staticip = "xxx"  # 2,电脑局域网固定IP，用于检测电脑开关状态以及利用SSH关机，改为你的设置
+pcusr = 'xxx'  # 3,电脑ssh用户名
+pcpw = 'xxx'  # 4,电脑ssh密码
 
-pcmac = '00.0C.29.BF.E7.04'  # 5,MAC地址，改成你自己电脑网卡的
+pcmac = 'xx.xx.xx.xx.xx.xx'  # 5,MAC地址，改成你自己电脑网卡的
 
 button1 = BlinkerButton("btn-pc2")  # 数据键，在App里设置一个一样的开关，类型为 '开关按键'，图标用滑动开关，其他随意，文本可为空
 cmd1 = "timeout 0.1 ping -c 1 " + staticip  # 电脑开关检测就是一个局域网内的ping，超时我设置为100ms，貌似太短或太长小爱都容易出错
